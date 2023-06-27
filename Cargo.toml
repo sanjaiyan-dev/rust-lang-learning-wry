@@ -9,3 +9,7 @@ edition = "2021"
 rodio = { version = "0.17.1", features = ["minimp3", "symphonia", "symphonia-aac", "symphonia-all", "symphonia-flac", "symphonia-isomp4", "symphonia-vorbis", "symphonia-wav", "wasm-bindgen"] }
 tao = { version = "0.20.0", features = ["dirs-next", "dox", "libappindicator", "serde", "tray"] }
 wry = { version = "0.29.0", features = ["devtools", "dox", "fullscreen", "linux-body", "transparent", "tray"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
